@@ -18,6 +18,7 @@ test:
 production:
   primary: &primary_production
     <<: *default
+    host: <%= Rails.application.credentials.postgresql_prod[:hostname] %>
     database: <%= Rails.application.credentials.postgresql_prod[:dbname] %>
     username: <%= Rails.application.credentials.postgresql_prod[:username] %>
     password: <%= Rails.application.credentials.postgresql_prod[:password] %>
