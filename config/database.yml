@@ -18,10 +18,10 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: <%= Rails.application.credentials.postgresql_house[:dbname] %>
-    username: <%= Rails.application.credentials.postgresql_house[:username] %>
-    password: <%= Rails.application.credentials.postgresql_house[:password] %>
-    port: <%= Rails.application.credentials.postgresql_house[:port] %>
+    database: <%= Rails.application.credentials.postgresql_prod[:dbname] %>
+    username: <%= Rails.application.credentials.postgresql_prod[:username] %>
+    password: <%= Rails.application.credentials.postgresql_prod[:password] %>
+    port: <%= Rails.application.credentials.postgresql_prod[:port] %>
   cache:
     <<: *primary_production
     database: movements_api_production_cache
