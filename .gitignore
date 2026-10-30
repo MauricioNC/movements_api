@@ -30,4 +30,11 @@
 
 # Ignore key files for decrypting credentials and more.
 /config/*.key
+<<<<<<< HEAD
+=======
+/config/database.yml
+
+# Ignore key files for decrypting credentials and more.
+/config/*.key
+>>>>>>> f1a91b8 (feat: Movement model created and configured the production db credentials)
 

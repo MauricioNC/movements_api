@@ -1,0 +1,25 @@
+<div data-controller="movements-table">
+  <table id="movementsTable" data-turbo-permanent="false">
+    <thead>
+      <tr>
+        <th>RFC</th>
+        <th>Nombre</th>
+        <th>Movimiento</th>
+        <th>Tipo contratacion</th>
+        <th>Cuenta</th>
+        <th>Fecha inicio</th>
+        <th>Adscripcion</th>
+        <th>Clave pres.</th>
+        <th>Comisionado a</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script>
+// Initialise a DataTable
+const table = new DataTable('#movementsTable', {
+    // Options
+});
+</script>
