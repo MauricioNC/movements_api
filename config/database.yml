@@ -1,15 +1,16 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: <%= Rails.application.credentials.postgresql_house[:hostname] %>
-  username: <%= Rails.application.credentials.postgresql_house[:username] %>
-  password: <%= Rails.application.credentials.postgresql_house[:password] %>
+  host: <%= Rails.application.credentials.postgresql_office[:hostname] %>
+  username: <%= Rails.application.credentials.postgresql_office[:username] %>
+  password: <%= Rails.application.credentials.postgresql_office[:password] %>
+  port: <%= Rails.application.credentials.postgresql_office[:port] %>
   max_connections: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 
 development:
   <<: *default
-  database: <%= Rails.application.credentials.postgresql_house[:dbname] %>
+  database: <%= Rails.application.credentials.postgresql_office[:dbname] %>
 
 test:
   <<: *default

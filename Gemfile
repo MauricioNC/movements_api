@@ -48,8 +48,6 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
-<<<<<<< HEAD
-=======
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
@@ -63,4 +61,3 @@ group :test do
 end
 
 gem 'pagy', '~> 43.8'
->>>>>>> f1a91b8 (feat: Movement model created and configured the production db credentials)
