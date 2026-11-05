@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-class ApplicationController < ActionController::API
-<<<<<<< HEAD
-=======
 class ApplicationController < ActionController::Base
   include Pagy::Method
 
@@ -10,9 +6,8 @@ class ApplicationController < ActionController::Base
 
   # Changes to the importmap will invalidate the etag for HTML responses
   stale_when_importmap_changes
->>>>>>> f1a91b8 (feat: Movement model created and configured the production db credentials)
-=======
-REQUIRED_MOVEMENT_PARMS = %i[
+
+  REQUIRED_MOVEMENT_PARMS = %i[
     movement_type
     place_type
     account_type
@@ -56,5 +51,4 @@ REQUIRED_MOVEMENT_PARMS = %i[
     proposed_by
     made_by
   ]
->>>>>>> 661e9a164447aa59c647312366f96061816ff9ad
 end
