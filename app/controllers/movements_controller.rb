@@ -1,11 +1,10 @@
 class MovementsController < ApplicationController
   def index
-    @pagy, @movements = pagy(:offset, Movement.order(:desc).all)
+    @pagy, @movements = pagy(:offset, Movement.order(start_date: :desc).all)
 
     render json: {
-      movements: @movements,
-      meta: pagy_metadata(@pagy)
-    }
+      movements: @movements
+    }, status: :ok
   end
 
   def create
