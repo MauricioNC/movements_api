@@ -1,6 +1,6 @@
 class CreateMovements < ActiveRecord::Migration[8.1]
   def change
-    create_table :movements do |t|
+    create_table :movements, id: :uuid do |t|
       t.string :movement_type
       t.string :place_type
       t.string :account_type

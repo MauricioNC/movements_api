@@ -25,6 +25,17 @@ class MovementsController < ApplicationController
     end
   end
 
+  def update
+    movement = Movement.find(params[:id])
+    movement.update(movements_params)
+
+    render json: { data: movement }, status: :created
+  rescue
+    render json: {
+      errors: movement
+    }, status: :unprocessable_entity
+  end
+
   private
 
   def movements_params
